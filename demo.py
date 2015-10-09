@@ -21,27 +21,6 @@ def random_instance():
         density(mat_dic['Z']), density(mat_dic['O']),
         density(comp.Z), density(comp.mask))
     
-    # import pylab as plt # TODO: remove
-    # #plt.plot(range(len(comp.mean_msg_rec)), comp.mean_msg_rec)
-    # plt.style.use('grayscale')
-    # f, (ax1, ax2,ax3) = plt.subplots(3, 1, sharex='col')#, sharey='row')
-    # ax1.hist(comp.msg_rec[0], bins = 100)
-    # ax1.set_title('iteration 2')
-    # ax1.set_ylabel("frequency")
-    # #ax1.set_yscale("log")
-    # ax2.hist(comp.msg_rec[1], bins = 100)
-    # ax2.set_ylabel("frequency")    
-    # #ax2.set_yscale("log")
-    # ax2.set_title('iteration 20')
-    # ax3.hist(comp.msg_rec[2], bins = 100)
-    # #ax3.set_yscale("log")
-    # ax3.set_ylabel("frequency")        
-    # ax3.set_title('iteration 200')
-    # ax3.set_xlabel("message value")
-    # plt.show()
-
-
-
 
     
 if __name__ == "__main__":

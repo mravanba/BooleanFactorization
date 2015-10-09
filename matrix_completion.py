@@ -101,8 +101,7 @@ class MatrixCompletion(object):
         self.init_msgs_n_marginals()
         iters = 1
         diff_msg = np.inf
-        # self.msg_rec = []
-        # self.mean_msg_rec = []
+
         while (diff_msg > self.tol and iters <= self.max_iter) or iters < 5:
             self.update_min_sum()#(outX, outY, inZ, outZ, newInX, newInY, posEdges, negEdges,  opt)
             diff_msg = np.max(np.abs(self.new_in_x - self.in_x))
@@ -116,9 +115,6 @@ class MatrixCompletion(object):
             else:
                 print ".",
                 sys.stdout.flush()
-            self.mean_msg_rec.append(np.count_nonzero(self.in_x.ravel < 1e-3) / float(np.prod(self.in_x.shape)))
-            # if iters in [1,10,100] or diff_msg < self.tol:
-            #     self.msg_rec.append(self.in_x.ravel().copy())
                 
             iters += 1
 
