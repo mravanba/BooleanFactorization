@@ -21,8 +21,8 @@ def random_instance():
 
     #inference method
     print "running inference"
-    #the input to inference is a 1) matrix O, 2) rank K, 3) a Boolean matrix mask indicating which values in O should be used/observed
-    #for more options, e.g. the priors over X and Y, number of iterations, see the code for MatrixCompletion
+    #the input to inference is 1) the input matrix O, 2) rank K, 3) mask: a Boolean matrix indicating which values in O should be used/observed
+    #for more options, e.g. the priors over X and Y, number of iterations, tolerance, see the comments for MatrixCompletion
     comp = MatrixCompletion(mat_dic['O'], K, mask = mat_dic['mask'], min_sum = True, verbose = True)
     comp.run()
 
